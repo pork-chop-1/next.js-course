@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .green {
+      background-color: #0F0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="test"></div>
+  <script
+    src="https://cdn.bootcdn.net/ajax/libs/react/18.3.0-next-4cd788aef-20220630/umd/react.development.min.js"></script>
+  <script
+    src="https://cdn.bootcdn.net/ajax/libs/react-dom/18.3.0-next-4cd788aef-20220630/umd/react-dom.development.min.js"></script>
+  <script src="https://cdn.bootcdn.net/ajax/libs/babel-standalone/7.0.0-beta.3/babel.min.js"></script>
+  <script type="text/babel">
+    // 创建虚拟dom
+    let content = 'hello world'
+    let list = ['Angular', 'react', 'Vue']
+    // 函数式组件
+    function ToList(props) {
+      return (
+        <ul>
+          {props.list.map((v) => <li key={v}>{v}</li>)}
+        </ul>
+      )
+    }
+
+    class ToListClass extends React.Component{
+      render() {
+        return <h2>class render</h2>
+      }
+    }
+    const VDom = (
+      <div>
+        <h1 className="green" style={{ width: '300px' }}>{content}</h1>
+        <input type="text" />
+        <ul>
+          {list.map((v) => <li key={v}>{v}</li>)}
+        </ul>
+        <ToList list={list}/>
+        {ToList({list})}
+        <ToListClass />
+      </div>
+    )
+    // 渲染
+    ReactDOM.render(VDom, document.querySelector('#test'))
+    content = 'hello world2'
+  </script>
+</body>
+
+</html>

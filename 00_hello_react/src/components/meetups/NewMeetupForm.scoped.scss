@@ -1,0 +1,52 @@
+.item {
+  display: flex;
+  align-items: flex-start;
+  margin: 0.25rem 0;
+  justify-content: space-between;
+
+  input {
+    width: 10rem;
+    border-radius: 0.75rem;
+    height: 1.5rem;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    outline: none;
+    padding: 0 .5rem;
+
+    &:hover, &:focus {
+      box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+      border-color: rgba(223, 225, 229, 0);
+    }
+  }
+
+  textarea {
+    width: 11rem;
+    border-radius: 0.75rem;
+    padding: .2rem;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    outline: none;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+
+  button {
+    background-color: rgb(0, 124, 207);
+    color: #fff;
+    width: 100%;
+    border-radius: 0.75rem;
+    height: 3rem;
+    border: none;
+
+    &:hover {
+      background-color: rgb(0, 124, 207);
+      box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    }
+
+    &:active {
+      background-color: rgb(21, 135, 211);
+      box-shadow: 0 1px 6px rgba(20, 21, 23, 0.455);
+    }
+
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "react-course",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "aplayer-react": "^1.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.15.0",
+    "sass": "^1.66.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.9",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "rollup-plugin-react-scoped-css": "^0.8.2",
+    "vite": "^4.4.5"
+  }
+}
